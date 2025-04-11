@@ -1,0 +1,199 @@
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.page {
+    position: relative;
+    width: 100%;
+    height: 842px; /* ✅ correct for A4 portrait */
+}
+
+
+.page-break {
+    page-break-before: always;
+}
+
+.banner {
+    width: 100%;
+    height: 40px;
+    background-image: url('assets/banner.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+}
+
+.banner-text {
+    font-size: 25px;
+    color: black;
+    margin-left: 10px;
+}
+
+.cover-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(595px - 40px);
+    text-align: center;
+}
+
+.cover-page img {
+    width: 200px;
+    margin-bottom: 30px;
+    margin-top: 75px;
+}
+
+.cover-page h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.cover-page p {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.cerebro-logo {
+    position: absolute;
+    bottom: -270px;
+    right: 10px;
+    width: 40px;
+}
+
+.content {
+    padding: 20px;
+}
+
+.content-table-wrapper {
+    height: 300px; /* or adjust, this will make all tables same height */
+    overflow: hidden;
+    margin-bottom: 20px; /* spacing between tables */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Table Styling */
+.report-table {
+    width: 95%; /* Reduced width slightly */
+    font-family: "Times New Roman", Times, serif;
+    border-collapse: collapse;
+    font-size: 11px; /* Smaller font size */
+    margin: 0 auto; /* Center table */
+}
+
+.report-table th {
+    background-color: #f26522;
+    color: black;
+    padding: 3px; /* Reduced padding */
+    border: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.report-table td {
+    border: 0;
+    padding: 3px; /* Reduced padding */
+    text-align: center;
+}
+
+/* Alternating row colors */
+.report-table tr:nth-child(even) td {
+    background-color: #fff5f0;
+}
+
+.report-table tr:nth-child(odd) td {
+    background-color: #fce5d9;
+}
+
+.table-title {
+    font-size: 20px; /* Slightly smaller title */
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    margin-top: -10px;
+}
+
+.content h2.table-title {
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.super-header {
+    background-color: #ff7f2a;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid black;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 9px; /* Match table font size */
+    padding: 3px; /* Match cell padding */
+}
+
+
+.mini-tables {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.mini-table {
+    width: 48%;
+}
+
+.ote-logo {
+    position: absolute;
+    bottom: -270px;
+    left: 10px;
+    width: 40px;
+}
+
+/* Game Log Table Specific Styling */
+.game-log-table {
+    width: 95%;
+    font-family: "Times New Roman", Times, serif;
+    border-collapse: collapse;
+    font-size: 9px; /* Smaller font for game logs */
+    margin: 0 auto;
+    table-layout: fixed;
+}
+
+.game-log-table th {
+    background-color: #f26522;
+    color: black;
+    padding: 2px;
+    border: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.game-log-table td {
+    border: 0;
+    padding: 2px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/* Alternating row colors */
+.game-log-table tr:nth-child(even) td {
+    background-color: #fff5f0;
+}
+
+.game-log-table tr:nth-child(odd) td {
+    background-color: #fce5d9;
+}
+
+/* Page break for game logs if too long */
+.game-log-table tr:nth-child(20) {
+    page-break-after: always;
+}
+
